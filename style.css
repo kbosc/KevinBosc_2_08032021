@@ -14,7 +14,7 @@ a{
   text-decoration: inherit;
 }
 
-h1, h2{
+h1{
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -70,8 +70,28 @@ header p{
 .container_form{
   padding-top: 0.7em;
   display: flex;
-  /* border: 1px solid burlywood; */
 }
+/* For Google Chrome: */
+.SearchPlaceholder::-webkit-input-placeholder {
+    color: black;
+    font-weight: bold;
+}
+/* For Mozilla Firefox: */
+.SearchPlaceholder::-moz-placeholder {
+    color: black;
+    font-weight: bold;
+}
+/* For Internet Explorer: */
+.SearchPlaceholder:-ms-input-placeholder {
+    color: black;
+    font-weight: bold;
+}
+/* For Opera: */
+.SearchPlaceholder:-o-input-placeholder {
+    color: black;
+    font-weight: bold;
+}
+
 .searchLogo{
   display: flex;
   width: 2em;
@@ -104,7 +124,6 @@ header p{
 .containerFiltres{
   display: flex;
   align-items: center;
-  /* align-items: flex-start; */
   justify-content: flex-start;
 }
 .iconFiltres{
@@ -116,128 +135,216 @@ header p{
   border-radius: 30px 30px 30px 30px;
   position: relative;
 }
+.textFiltre{
+  margin-left: 0.7em;
+  padding-right: -0.7em;
+}
 .iconLeft{
   display: flex;
   align-items: center;
-  border: 1px solid #bad1f3;
-  background-color: #bad1f3;
-  border-radius: 50%;
   width: 2.2em;
   height: 2.2em;
-  color: #0065FC;
   position: absolute;
-  /* top: calc(50% - 10px); */
   left: -12px;
-  /* margin-right: 10em; */
 }
 .iconRight{
+  display: flex;
+  border: 1px solid #bad1f3;
+  background-color: #bad1f3;
+  color: #0065FC;
+  border-radius: 50%;
   position: absolute;
-  right: 8px;
+  justify-content: center;
+  align-items: center;
+  height: 2.2em;
+  width: 2.2em;
+  right: -9px;
 }
 
 .information{
   display: flex;
-  position: relative;
+  align-items: center;
+  margin-bottom: 2em;
 }
 .fa-info{
-  border: 1px solid #cbd0d4;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
+  display: flex;
+  border: 2px solid #cbd0d4;
   color: #0065FC;
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.7em;
 }
 /* -----------------HEADER------------- */
 
-.icon {
-    width: 2em;
-}
 
-.iconStar {
-    width: 1em;
+/* ------------------MAIN------------------------------ */
+/* -----------HERBERGEMENT---------------- */
+.fa-star {
+  color: #0065FC;
 }
-
-img {
-    max-width: 10em;
+.starGrey .fa-star{
+  color: #cbd0d4;
 }
-
 .hebergement {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
-
-.hebergement_vignette {
+.hebergement_column {
+  background-color: #cbd0d4;
+  border-radius: 10px;
+  flex-basis:65.00%;
+  padding: 1em;
+}
+.popularity {
+  background-color: #cbd0d4;
+  border-radius: 10px;
+  flex-basis: 28.00%;
+  padding: 1em;
+}
+.titleHebergement{
+  padding: 0 1em;
+}
+.moreHebergement{
+  padding: 1em 1em;
+  font-weight: bold;
+}
+h2{
+  font-size: 1.2em;
+  font-weight: bold;
+  /* padding: 1em 0 0.5em 1em; */
+}
+.hebergementVignette {
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
-    width: auto;
+    justify-content: space-between;
+    /* width: auto; */
 }
-
 .vignette {
-    flex: 0 1 calc(30% - 0px)
+    background-color: white;
+    border-radius: 10%;
+    padding: 0.3em;
+    margin: 1em;
+    flex-basis: 25%;
+}
+.vignette img{
+  width: 100%;
+  border-radius: 11% 11% 0 0;
+  max-height: 8em;
+  object-fit: cover;
+}
+.hebergementVignetteSection{
+  padding-left: 1em;
+  font-size: 0.8em;
 }
 
-.popu {
-    display: flex;
-    flex-direction: row;
+
+
+.popularity h2{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
 }
-
-.vignette:hover {
-    box-shadow: box-shadow: 2px 5px 8px 5px #C9C9C9;
+.containerVignette{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+.vignettePopu{
+  background-color: white;
+  border-radius: 10%;
+  padding: 0.3em;
+  margin: 1em;
+  display: flex;
+  flex-basis: 25%;
+  flex-direction: row;
+  font-size: 0.8em;
+  max-height: 13em;
+}
+.vignettePopu img{
+  border-radius: 11% 0 0 11%;
+  height: 12em;
+  width: 11em;
+  object-fit: cover;
+}
+.sectionPopu{
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* .sectionPopu div{
+  margin-top: -0.7em;
+} */
+/* .starPopu{
+  margin-top: 2em;
+} */
+/* -----------HERBERGEMENT---------------- */
 
-
-
-
-
+/* ---------------ACTIVITE----------------------- */
 #wrapper {
-    display: flex;
-    height: 400px;
+  display: flex;
+  max-height: 400px;
+}
+.column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  margin: 1em;
+  border-radius: 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.item img{
+  flex-grow: 1;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+.item h3{
+  padding-left: 1em;
+}
+.item:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+/* .column:first-child > :last-child, .column:last-child > :first-child {
+  flex-grow: 1;
+} */
+/* #item:nth-of-type(1), .item:nth-of-type(2){
+  flex-grow: 0;
+} */
+@media (max-width: 800px) {
+  #wrapper {
+    flex-direction: column;
   }
   .column {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
+    display: contents;
   }
-  .item {
-    /* background: #66D8A4;
-    margin: 1em;
-    padding: 1em; */
-    flex-grow: 1;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-  }
-  /* .activite_column {
-    flex-direction: column;
-  } */
-  .column:first-child > :last-child, .column:last-child > :first-child {
-    flex-grow: 2;
-  }
-  @media (max-width: 800px) {
-    #wrapper {
-      flex-direction: column;
-    }
-    .hebergement_column {
-      flex-direction: column;
-    }
-    .column {
-      display: contents;
-    }
-    .vignette {
-      /* display: contents; */
-    }
-  }
+}
+/* ---------------ACTIVITE----------------------- */
 
+
+/* ------------------MAIN---------------------------- */
 
 
   footer{
     display: flex;
     flex-direction: row;
-  }
-  .foot_flex{
-    /* display: flex; */
+    flex-wrap: wrap;
   }
   .about{
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+    padding-right: 12em;
   }
