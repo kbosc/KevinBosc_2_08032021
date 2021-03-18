@@ -4,6 +4,7 @@
 body{
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   margin: 0.1em 10em;
+  color: black;
 }
 a{
   color: inherit;
@@ -26,9 +27,11 @@ p{
 }
 
 .container_main{
-  padding: 3em;
+  padding: 0 3em;
 }
-/* ---------------NAV------------- */
+   /*          *-------------------------*
+               *        Nav              *
+               *-------------------------*                          */
 nav{
   display: flex;
   justify-content: space-between;
@@ -45,10 +48,12 @@ nav{
 }
 
 .nav_container div:hover{
+  color: #0065FC;
   box-shadow: 0px -5px 1px -3px #0065FC;
 }
 .log {
   color: #0065FC;
+  font-weight: bold;
 }
 
 /* Pour le responsive, donner order aux div,
@@ -62,16 +67,21 @@ align-self: flex-end stretch; */
 .target:nth-of-type(7){
   /* align-self: flex-end; */
 }
-/* ---------------NAV------------- */
+   /*          *-------------------------*
+               *        Nav              *
+               *-------------------------*                          */
 
 
-/* -----------------HEADER------------- */
+   /*          *-------------------------*
+               *        Header           *
+               *-------------------------*                          */
 header p{
   line-height: 0em;
 }
 .container_form{
   padding-top: 0.7em;
   display: flex;
+  height: 3em;
 }
 /* For Google Chrome: */
 .SearchPlaceholder::-webkit-input-placeholder {
@@ -96,10 +106,9 @@ header p{
 
 .searchLogo{
   display: flex;
-  width: 2em;
-  height: 34px;
-  border: 1px solid #cbd0d4 ;
-  background-color: #cbd0d4;
+  width: 3em;
+  border: 1px solid #F2F2F2 ;
+  background-color: #F2F2F2;
   justify-content: center;
   align-items: center;
   border-radius: 9px 0 0 9px;
@@ -107,15 +116,13 @@ header p{
 
 }
 #search{
-  width: 11em;
-  border: 1px solid #cbd0d4;
-  padding: 7px;
-  height: 20px;
-  outline: none;
+  width: 12em;
+  border: 1px solid rgb(242, 242, 242);
+  padding: 1em;
+  outline: none
 }
 .searchButton{
-  width: 7em;
-  height: 36px;
+  width: 9em;
   border: 1px solid #0065FC ;
   background-color: #0065FC;
   text-align: center;
@@ -127,15 +134,21 @@ header p{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  justify-content: space-evenly;
+  max-width: 52em;
 }
 .iconFiltres{
   display: flex;
   align-items: center;
-  border: 2px solid #cbd0d4;
+  border: 2px solid #F2F2F2;
   margin: 1.5em 0 1.5em 1.5em;
   padding: 0.5em 2em 0.5em 2em;
   border-radius: 30px 30px 30px 30px;
   position: relative;
+  font-weight: bold;
+}
+.iconFiltres:hover {
+  border: 2px solid #0065FC;
 }
 .textFiltre{
   margin-left: 0.7em;
@@ -144,15 +157,31 @@ header p{
 .iconLeft{
   display: flex;
   align-items: center;
-  width: 2.2em;
-  height: 2.2em;
-  position: absolute;
-  left: -12px;
+  /* width: 2.2em; */
+  /* height: 2.2em; */
+  /* position: absolute; */
+  /* left: -1em; */
+  /* -webkit-transform: translate3d(-1em,0, 0); */
+  /* -webkit-transition: -webkit-transform 0.55s; */
+  /* transition: transform 0.55s, color 1s; */
+  transform: translate3d(-1em,0,0);
+  
+}
+.iconFiltres:hover .iconLeft .iconRight {
+  border: 1px solid #0065FC;
+  background-color: #0065FC;
+  color: #DEEBFF;
+  /* -webkit-transform: translate3d(0,0,0); */
+	transform: rotate(360deg);
+  transition: transform 1.5s, color 1s;
+  /* transform: translateX( -1px ) rotateY( 360deg ); */
+	/* transform: translate3d(20em,0,0) scale(2) rotate(360deg) opacity(0); */
+  /* transition: opacity 3s, transform 1.5s, color 1s; */
 }
 .iconRight{
   display: flex;
-  border: 1px solid #bad1f3;
-  background-color: #bad1f3;
+  border: 1px solid #DEEBFF;
+  background-color: #DEEBFF;
   color: #0065FC;
   border-radius: 50%;
   position: absolute;
@@ -170,7 +199,7 @@ header p{
 }
 .fa-info{
   display: flex;
-  border: 2px solid #cbd0d4;
+  border: 2px solid #F2F2F2;
   color: #0065FC;
   border-radius: 50%;
   height: 1.5em;
@@ -179,31 +208,43 @@ header p{
   align-items: center;
   margin-right: 0.7em;
 }
-/* -----------------HEADER------------- */
+   /*          *-------------------------*
+               *        Header           *
+               *-------------------------*                          */
 
 
-/* ------------------MAIN------------------------------ */
-/* -----------HERBERGEMENT---------------- */
+   /*          *-------------------------*
+               *        Main             *
+               *-------------------------*                          */
+
+
+   /*          *-------------------------*
+               *        Hebergement      *
+               *-------------------------*                          */
 .fa-star {
   color: #0065FC;
+}
+.fa-star:hover{
+  transform: scale(1.5);
+  transition: 0.35s;
 }
 .starGrey .fa-star{
   color: #cbd0d4;
 }
 .hebergement {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .hebergement_column {
-  background-color: #cbd0d4;
+  background-color: #F2F2F2;
   border-radius: 10px;
   flex-basis:65.00%;
   padding: 1em;
 }
 .popularity {
-  background-color: #cbd0d4;
+  background-color: #F2F2F2;
   border-radius: 10px;
   flex-basis: 28.00%;
   padding: 1em;
@@ -220,20 +261,20 @@ h2{
   font-weight: bold;
 }
 .hebergementVignette {
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 .hebergementVignette a {
   display: flex;
   flex-basis: 33%;
 }
 .vignette {
-    background-color: white;
-    border-radius: 18px;
-    padding: 0.3em;
-    margin: 1em;
+  background-color: white;
+  border-radius: 18px;
+  padding: 0.3em;
+  margin: 1em;
 }
 .vignette img{
   width: 100%;
@@ -246,6 +287,7 @@ h2{
   font-size: 0.8em;
   line-height: 1em;
 }
+
 
 
 
@@ -282,57 +324,87 @@ h2{
   flex-direction: column;
   justify-content: space-between;
 }
-/* -----------HERBERGEMENT---------------- */
+   /*          *-------------------------*
+               *        Hebergement      *
+               *-------------------------*                          */
 
-/* ---------------ACTIVITE----------------------- */
-#wrapper {
-  display: flex;
-  max-height: 400px;
-  margin-left: -17px;
-}
-.column {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-.item {
-  margin: 1em;
-  border-radius: 18px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.item img{
-  flex-grow: 1;
-  object-fit: cover;
-  border-radius: 18px 18px 0 0;
-}
-.item h3{
-  padding-left: 1em;
-}
-/* .column:first-child > :last-child, .column:last-child > :first-child {
-  flex-grow: 1;
-} */
-/* #item:nth-of-type(1), .item:nth-of-type(2){
-  flex-grow: 0;
-} */
-@media (max-width: 800px) {
+   /*          *-------------------------*
+               *        Activite         *
+               *-------------------------*                          */
+
+
+/* @media (max-width: 800px) {
   #wrapper {
     flex-direction: column;
   }
   .column {
     display: contents;
-  }
+  } */
+
+.big_container {
+  margin: 4em 0;
 }
-/* ---------------ACTIVITE----------------------- */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 30em;
+  align-content: space-between;
+  justify-content: space-between;
+  /* width: 100%; */
+}
+
+.item {
+  width: 18em;
+  overflow: hidden;
+  border-radius: 18px;
+}
+.item a {
+  display: flex;
+  flex-direction: column;
+}
+.item a img {
+  object-fit: cover;
+  /* height: max-content; */
+}
+.item a h3 {
+  font-size: 1em;
+  padding: 0.5em 1em;
+}
+.item1 {
+  flex-basis: 100%;
+}
+.item1 img {
+  height: 26em;
+}
+
+.item2 {
+  flex-basis: 55%;
+}
+.item2 img {
+  height: 13em;
+}
+
+.item2-extra {
+  flex-basis: 35%;
+}
+.item2-extra img {
+  height: 105px;
+}
 
 
-/* ------------------MAIN---------------------------- */
+   /*          *-------------------------*
+               *        Activite         *
+               *-------------------------*                          */
+
+   /*          *-------------------------*
+               *        Main             *
+               *-------------------------*                          */
 
 
   footer{
-    background-color: #cbd0d4;
+    background-color: #F2F2F2;
     padding: 3em;
     display: flex;
     flex-direction: row;
