@@ -56,17 +56,33 @@ nav{
   font-weight: bold;
 }
 
-/* Pour le responsive, donner order aux div,
-1 et 3 en haut et 2 en bas stretch */
-/* un truc genre
-flex-direction: row;
-align-items: flex-start;
-ensuite sur la :target
-align-self: flex-end stretch; */
 
-.target:nth-of-type(7){
-  /* align-self: flex-end; */
+.container_form_smartphone {
+  display: none;
 }
+.nav_container_smartphone {
+  display: flex;
+  flex-direction: column;
+}
+.nav_container_smartphone div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  align-items: center;
+}
+.nav_container_smartphone div:last-child a {
+  justify-content: space-around;
+  border-bottom: 3px solid #F2F2F2;
+  padding-bottom: 0.5em;
+  flex-basis: 50%;
+  display: flex;
+}
+.nav_container_smartphone div:last-child a:hover {
+  color: #0065FC;
+  border-bottom: 3px solid #0065FC;
+}
+
    /*          *-------------------------*
                *        Nav              *
                *-------------------------*                          */
@@ -78,7 +94,10 @@ align-self: flex-end stretch; */
 header p{
   line-height: 0em;
 }
-.container_form{
+.fa-search {
+  color: white;
+}
+.container_form_desktop{
   padding-top: 0.7em;
   display: flex;
   height: 3em;
@@ -130,6 +149,10 @@ header p{
   color: white;
 }
 
+.filtre_row {
+  display: flex;
+  align-items: center;
+}
 .containerFiltres{
   display: flex;
   align-items: center;
@@ -223,6 +246,7 @@ header p{
                *-------------------------*                          */
 .fa-star {
   color: #0065FC;
+  padding-bottom: 0.5em;
 }
 .fa-star:hover{
   transform: scale(1.5);
@@ -231,7 +255,7 @@ header p{
 .starGrey .fa-star{
   color: #cbd0d4;
 }
-.hebergement {
+#hebergement {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -249,7 +273,7 @@ header p{
   flex-basis: 28.00%;
   padding: 1em;
 }
-.titleHebergement{
+#titleHebergement{
   padding: 0 1em;
 }
 .moreHebergement{
@@ -341,7 +365,7 @@ h2{
     display: contents;
   } */
 
-.big_container {
+#big_container {
   margin: 4em 0;
 }
 
@@ -405,16 +429,240 @@ h2{
 
   footer{
     background-color: #F2F2F2;
-    padding: 3em;
+    padding: 1em 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly
+    justify-content: flex-start;
   }
   .about{
     display: flex;
     flex-direction: column;
     line-height: 2em;
-    padding-right: 12em;
+    padding-left: 9em;
   }
+
+   /*          *-------------------------*
+               *        Media            *
+               *-------------------------*  
+ */
+ @media screen and (min-width : 501px) {
+  .nav_container_smartphone {
+    display: none;
+  }
+}
+
+
+ @media screen and (max-width: 1610px) {
+  body {
+    margin: 0.1em 5em;
+  }
+
+}
+
+ @media screen and (max-width: 1444px) {
+  body {
+    margin: 0.1em 1em;
+  }
+  .item {
+    width: 16em;
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  #hebergement {
+    display: block;
+  }
+  .popularity {
+    margin-top: 1em;
+  }
+  .vignettePopu img{
+    width: 34em;
+  }
+  .wrapper {
+    height: 20em;
+  }
+  .item {
+    width: 13em;
+  }
+  .item1 img {
+    height: 16em;
+}
+.item a h3 {
+  font-size: 0.9em;
+  padding: 0 1em;
+}
+.item2 img {
+  height: 8em;
+}
+.item2-extra img {
+  height: 73px;
+}
+}
+
+@media screen and (max-width: 990px) {
+.container_form_desktop {
+  margin-left: 1em;
+}
+.filtre_row {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.filtre_row h2 {
+  margin-bottom: -0.5em;
+  padding-left: 1em;
+}
+.containerFiltres {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item {
+  width: 12em;
+}
+.wrapper {
+  height: 16em;
+}
+.item1 img {
+  height: 13em;
+}
+.item a h3 {
+  font-size: 0.8em;
+}
+.item2 img {
+  height: 6em;
+}
+.item2-extra a h3 {
+  font-size: 0.6em;
+}
+.item2-extra img {
+  height: 4em;
+}
+}
+    
+@media screen and (max-width: 950px) {
+.hebergementVignette a {
+  flex-basis: 50%;
+}
+.item {
+  width: 10em;
+}
+}
+
+@media screen and (max-width : 850px) {
+  .vignettePopu img {
+    width: 27em;
+}
+.iconFiltres {
+  margin-bottom: 0.5em;
+}
+.information {
+  margin: 2em 1em;
+}
+}
+
+@media screen and (max-width : 800px) {
+.vignettePopu img {
+  width: 24em;
+}
+.wrapper {
+  flex-direction: row;
+  height: auto;
+}
+.item {
+  flex-basis: 100%;
+  margin-bottom: 1em;
+}
+.item img {
+  height: 9em;
+}
+.item a h3 {
+  font-size: 1em;
+}
+.about {
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width : 680px) {
+body {
+  margin: 0.1em 0em;
+}
+.container_main {
+  padding: 0 0.5em;
+}
+#hebergement {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.hebergement_column{
+  background-color: inherit;
+}
+.hebergementVignette a {
+    flex-basis: 100%;
+    display: block;
+}
+#big_container {
+  margin: 4em 2em;
+}
+footer {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.about {
+  line-height: 1.4em;
+  padding-left: 3em;
+  font-size: 1em;
+}
+.about h3 {
+  margin-bottom: 0.5em;
+}
+}
+
+@media screen and (max-width : 500px) {
+.searchLogo {
+    flex-basis: 15%;
+}
+#search_smartphone {
+  flex-basis: 70%;
+  width: 12em;
+  border: 1px solid rgb(242, 242, 242);
+  padding: 1em;
+  outline: none
+}
+.searchButton {
+  flex-basis: 15%;
+  border-radius: 9px;
+  margin-left: -1em;
+}
+.containerFiltres {
+  margin-right: 6em;
+}
+.vignettePopu img {
+  width: 13em;
+}
+.container_form_desktop {
+  display: none;
+}
+.container_form_smartphone {
+  display: inline;
+  padding-top: 0.7em;
+  display: flex;
+  height: 3em;
+  margin-left: 1em;
+}
+header h1 {
+  font-size: 1.8em;
+}
+header p {
+  font-size: 1.3em;
+}
+.information p {
+  font-size: 0.9em;
+}
+.nav_container_desktop {
+  display: none;
+}
+.nav_container_smartphone {
+  display: inline;
+}
+}
