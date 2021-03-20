@@ -215,20 +215,14 @@ header p{
   right: -9px;
 }
 
-.information{
-  display: flex;
-  align-items: center;
-  margin-bottom: 2em;
-}
-.fa-info{
-  display: flex;
+.fa-info {
   border: 2px solid #F2F2F2;
   color: #0065FC;
   border-radius: 50%;
   height: 1.5em;
   width: 1.5em;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  line-height: 19px;
   margin-right: 0.7em;
 }
    /*          *-------------------------*
@@ -687,63 +681,14 @@ h2 {
   margin-left: 1em;
 }
 header h1 {
-  font-size: 0.9em;
-}
-header p {
-  font-size: 0.9em;
-}
-.information p {
-  font-size: 0.5em;
-}
-.nav_container_desktop {
-  display: none;
-}
-.nav_container_smartphone {
-  display: inline;
-}
-}
-
-
-
-/* @media screen and (min-width : 321px) and (max-width : 500px) {
-  .searchLogo {
-    flex-basis: 15%;
-}
-#search_smartphone {
-  flex-basis: 70%;
-  width: 12em;
-  border: 1px solid rgb(242, 242, 242);
-  padding: 1em;
-  outline: none
-}
-.searchButton {
-  flex-basis: 15%;
-  border-radius: 9px;
-  margin-left: -1em;
-}
-.containerFiltres {
-  margin-right: 6em;
-}
-.vignettePopu img {
-  width: 13em;
-}
-.container_form_desktop {
-  display: none;
-}
-.container_form_smartphone {
-  display: inline;
-  padding-top: 0.7em;
-  display: flex;
-  height: 3em;
   margin-left: 1em;
-}
-header h1 {
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 header p {
+  margin-left: 1em;
   font-size: 1.3em;
 }
-.information p {
+.information {
   font-size: 0.9em;
 }
 .nav_container_desktop {
@@ -752,4 +697,4 @@ header p {
 .nav_container_smartphone {
   display: inline;
 }
-  } */
+}
