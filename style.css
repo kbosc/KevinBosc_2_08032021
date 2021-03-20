@@ -446,6 +446,7 @@ h2{
                *        Media            *
                *-------------------------*  
  */
+
  @media screen and (min-width : 501px) {
   .nav_container_smartphone {
     display: none;
@@ -619,7 +620,93 @@ footer {
 }
 
 @media screen and (max-width : 500px) {
+body {
+ margin: 0;
+}
+h2 {
+  font-size: 1.1em;
+}
+.container_main {
+  padding: 0;
+}
+.iconFiltres {
+  margin: 1em 1.5em;
+}
 .searchLogo {
+    flex-basis: 15%;
+    margin-left: -1em;
+}
+#search_smartphone {
+  flex-basis: 70%;
+  width: 12em;
+  border: 1px solid rgb(242, 242, 242);
+  padding: 1em;
+  outline: none
+}
+.searchButton {
+  flex-basis: 18%;
+  border-radius: 9px;
+  margin-left: -1em;
+}
+.vignettePopu {
+  max-height: 9em;
+  margin: 1em 0;
+}
+.vignettePopu img {
+  width: 7em;
+  height: 9em;
+}
+.sectionPopu {
+  font-size: 0.8em;
+}
+.vignette {
+  margin: 1em 0;
+}
+.vignette img {
+  max-height: 6em;
+}
+.hebergementVignetteSection {
+  padding-left: 1em;
+  font-size: 0.6em;
+  line-height: 0.5em;
+}
+.item img {
+  height: 6em;
+}
+.item a h3 {
+  font-size: 0.8em;
+}
+.container_form_desktop {
+  display: none;
+}
+.container_form_smartphone {
+  display: inline;
+  padding-top: 0.7em;
+  display: flex;
+  height: 3em;
+  margin-left: 1em;
+}
+header h1 {
+  font-size: 0.9em;
+}
+header p {
+  font-size: 0.9em;
+}
+.information p {
+  font-size: 0.5em;
+}
+.nav_container_desktop {
+  display: none;
+}
+.nav_container_smartphone {
+  display: inline;
+}
+}
+
+
+
+/* @media screen and (min-width : 321px) and (max-width : 500px) {
+  .searchLogo {
     flex-basis: 15%;
 }
 #search_smartphone {
@@ -665,4 +752,4 @@ header p {
 .nav_container_smartphone {
   display: inline;
 }
-}
+  } */
