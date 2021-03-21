@@ -3,7 +3,7 @@
 
 body{
   font-family: "Raleway", Arial, Helvetica, sans-serif;
-  margin: 0.1em 10em;
+  margin: 0.1em 0em;
   color: black;
 }
 a{
@@ -350,15 +350,6 @@ h2{
                *        Activite         *
                *-------------------------*                          */
 
-
-/* @media (max-width: 800px) {
-  #wrapper {
-    flex-direction: column;
-  }
-  .column {
-    display: contents;
-  } */
-
 #big_container {
   margin: 4em 0;
 }
@@ -384,7 +375,6 @@ h2{
 }
 .item a img {
   object-fit: cover;
-  /* height: max-content; */
 }
 .item a h3 {
   font-size: 1em;
@@ -441,24 +431,14 @@ h2{
                *-------------------------*  
  */
 
+
  @media screen and (min-width : 501px) {
   .nav_container_smartphone {
     display: none;
   }
 }
 
-
- @media screen and (max-width: 1610px) {
-  body {
-    margin: 0.1em 5em;
-  }
-
-}
-
  @media screen and (max-width: 1444px) {
-  body {
-    margin: 0.1em 1em;
-  }
   .item {
     width: 16em;
   }
@@ -579,9 +559,6 @@ h2{
 }
 
 @media screen and (max-width : 680px) {
-body {
-  margin: 0.1em 0em;
-}
 .container_main {
   padding: 0 0.5em;
 }
@@ -696,5 +673,31 @@ header p {
 }
 .nav_container_smartphone {
   display: inline;
+}
+}
+
+@media screen and (max-width : 414px) {
+.information {
+  font-size: 0.8em;
+}
+}
+
+@media screen and (max-width : 375px) {
+header p {
+  font-size: 0.8em;
+  margin-left: 1.4em;
+}
+header h1 {
+  margin-right: 0.1em;
+  font-size: 1.2em;
+}
+.information {
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width : 320px) {
+  .information {
+    font-size: 0.6em;
 }
 }
