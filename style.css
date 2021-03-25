@@ -43,11 +43,11 @@ nav{
   width: 100%;
 }
 
-.nav_container div{
+.nav_container a {
   padding: 2em;
 }
 
-.nav_container div:hover{
+.nav_container a:hover{
   color: #0065FC;
   box-shadow: 0px -5px 1px -3px #0065FC;
 }
@@ -59,28 +59,6 @@ nav{
 
 .searchButton--smartphone {
   display: none;
-}
-.nav_container_smartphone {
-  display: flex;
-  flex-direction: column;
-}
-.nav_container_smartphone div {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1em;
-  font-size: 1.3em;
-  align-items: center;
-}
-.nav_container_smartphone div:last-child a {
-  justify-content: space-around;
-  border-bottom: 3px solid #F2F2F2;
-  padding-bottom: 0.5em;
-  flex-basis: 50%;
-  display: flex;
-}
-.nav_container_smartphone div:last-child a:hover {
-  color: #0065FC;
-  border-bottom: 3px solid #0065FC;
 }
 
    /*          *-------------------------*
@@ -97,7 +75,7 @@ header p{
 .fa-search {
   color: white;
 }
-.container_form_desktop{
+.container_form{
   padding-top: 0.7em;
   display: flex;
   height: 3em;
@@ -172,6 +150,7 @@ header p{
 }
 .iconFiltres:hover {
   border: 2px solid #0065FC;
+  background-color: #DEEBFF;
 }
 .textFiltre{
   margin-left: 0.7em;
@@ -432,9 +411,38 @@ h2{
  */
 
 
- @media screen and (min-width : 501px) {
-  .nav_container_smartphone {
-    display: none;
+ @media screen and (min-width : 0px) and (max-width : 500px) {
+  .nav_container_desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0.2em;
+    font-size: 1.3em;
+  }
+  .nav_container_desktop div {
+    margin-bottom: 1em;
+  }
+  .nav_container a {
+    justify-content: space-around;
+    border-bottom: 3px solid #F2F2F2;
+    padding: 0.5em 0em;
+    flex-basis: 50%;
+    display: flex;
+  }
+  .nav_container a:hover {
+    color: #0065FC;
+    border-bottom: 3px solid #0065FC;
+    box-shadow: none;
+    }
+  .nav_img {
+    order: 0;
+  }
+  .nav_signup {
+    order: 1;
+  }
+  .nav_container {
+    order: 2;
   }
 }
 
@@ -476,7 +484,7 @@ h2{
 }
 
 @media screen and (max-width: 990px) {
-.container_form_desktop {
+.container_form {
   margin-left: 1em;
 }
 .filtre_row {
@@ -647,7 +655,7 @@ h2 {
 .item a h3 {
   font-size: 0.8em;
 }
-.container_form_desktop {
+.container_form {
   display: inline;
   padding-top: 0.7em;
   display: flex;
@@ -670,12 +678,6 @@ header p {
 }
 .information {
   font-size: 0.9em;
-}
-.nav_container_desktop {
-  display: none;
-}
-.nav_container_smartphone {
-  display: inline;
 }
 }
 
